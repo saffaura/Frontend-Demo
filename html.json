@@ -1,4 +1,4 @@
 [
     "./src/*.html",
-    "./src/js/components/**/*.html"
+    "./src/app/**/*.html"
 ]

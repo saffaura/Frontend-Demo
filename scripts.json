@@ -1,4 +1,6 @@
 [
-    "./src/js/*.js",
-    "./src/js/**/*.js"
+    "./src/app/*.module.js",
+    "./src/app/services/*.js",
+    "./src/app/tasks/*.js",
+    "./src/app/**/*.js"
 ]

@@ -1,4 +1,4 @@
 [
 	"./src/scss/*.scss",
-    "./src/scss/**/*.scss"
+  "./src/scss/**/*.scss"
 ]

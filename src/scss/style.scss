@@ -1,9 +1,44 @@
 body {
-    -webkit-font-smoothing: antialiased;
-    -moz-font-smoothing: antialiased;
-    font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
-    font-smooth: always;
-	background-color: black;
-	color: white;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-smooth: always;
+  background-color: black;
+  color: white;
+  height: 100%;
+}
+
+.btn-complete {
+  background-color: blue;
+}
+
+.navbar {
+  border-radius: 0px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.63);
+}
+
+tasks, #circle-progress {
+  display: table-cell;
+  vertical-align: middle;
+  width: 50%;
+}
+
+#login-panel {
+  text-align: center;
+}
+
+#login-form {
+  width: 400px;
+  top: 50%;
+  left: 50%;
+  margin-top: -100px;
+  margin-left: -200px;
+  position: absolute;
+  display: grid;
+}
+
+#main-panel {
+  display: table-row;
 }
