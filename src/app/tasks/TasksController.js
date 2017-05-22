@@ -1,16 +1,15 @@
 (function() {
   angular.module('fancyTasks')
-  .controller('TasksController', ['taskService', 'userService', '$scope', '$rootScope', '$location',
-  function(taskService, userService, $scope, $rootScope, $location) {
+  .controller('TasksController', ['taskFactory', 'userService', '$scope', '$rootScope', '$location',
+  function(taskFactory, userService, $scope, $rootScope, $location) {
     $scope.complete = 0;
 
     $scope.completeTask = function(task) {
-      // TODO when complete button is clicked, update usertasks
-      var index = $rootScope.tasks.indexOf(task);
-      if(index != -1 && $rootScope.tasks[index].complete !== "true") {
-        $rootScope.tasks[index].complete = "true";
-        taskService.completeTask();
-        userService.updateUser($scope.user);
+      var index = $rootScope.user.tasks.indexOf(task);
+      if(index != -1 && $rootScope.user.tasks[index].complete !== "true") {
+        $rootScope.user.tasks[index].complete = "true";
+        taskFactory.completeTask();
+        userService.updateUser($rootScope.user);
       }
     };
 
@@ -19,22 +18,20 @@
     }
 
     $scope.newTasks = function() {
-      taskService.getRandomTasks(function(data) {
-        $rootScope.tasks = JSON.parse(JSON.stringify(data));;
-        $scope.user.tasks = data;
-        userService.updateUser($scope.user);
+      taskFactory.getRandomTasks(function(data) {
+        $rootScope.user.tasks = JSON.parse(JSON.stringify(data));
+        userService.updateUser($rootScope.user);
       });
     };
 
     userService.getUser($rootScope.username, function(user) {
-      $scope.user = user;
-
-      if($scope.user.tasks && $scope.user.tasks.length > 0) {
-        taskService.resetCompleted();
-        $rootScope.tasks = $scope.user.tasks;
-        $rootScope.tasks.forEach(function(task) {
+      $rootScope.user = user;
+	  taskFactory.resetCompleted();
+	  
+      if($rootScope.user.tasks && $rootScope.user.tasks.length > 0) {
+        $rootScope.user.tasks.forEach(function(task) {
           if(task.complete === "true") {
-            taskService.completeTask();
+            taskFactory.completeTask();
           }
         });
       } else {

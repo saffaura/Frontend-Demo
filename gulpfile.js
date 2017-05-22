@@ -68,8 +68,8 @@ gulp.task('html', function() {
 });
 
 gulp.task('resources', function() {
-    return gulp.src('./src/app/services/data/*.json')
-		  .pipe(gulp.dest('./app/data/'));
+    return gulp.src(['./src/app/services/**/*.json', './src/**/*.png'])
+		  .pipe(gulp.dest('./app/'));
 });
 
 gulp.task('bower', function() {

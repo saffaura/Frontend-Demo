@@ -1,43 +1,33 @@
 [
 	{
 		"id": "0",
-		"task": "Buy groceries",
-		"image": "images/task0.png"
+		"task": "Buy groceries"
 	}, {
 		"id": "1",
-		"task": "Cook dinner",
-		"image": "images/task1.png"
+		"task": "Cook dinner"
 	}, {
 		"id": "2",
-		"task": "Water the plants",
-		"image": "images/task2.png"
+		"task": "Water the plants"
 	}, {
 		"id": "3",
-		"task": "Practice piano",
-		"image": "images/task3.png"
+		"task": "Practice piano"
 	}, {
 		"id": "4",
-		"task": "Walk the dog",
-		"image": "images/task4.png"
+		"task": "Walk the dog"
 	}, {
 		"id": "5",
-		"task": "Buy flowers for mom",
-		"image": "images/task5.png"
+		"task": "Buy flowers for mom"
 	}, {
 		"id": "6",
-		"task": "Do the laundry",
-		"image": "images/task6.png"
+		"task": "Do the laundry"
 	}, {
 		"id": "7",
-		"task": "Exercise",
-		"image": "images/task7.png"
+		"task": "Exercise"
 	}, {
 		"id": "8",
-		"task": "Eat an apple",
-		"image": "images/task8.png"
+		"task": "Eat an apple"
 	}, {
 		"id": "9",
-		"task": "Dance like nobody's watching",
-		"image": "images/task9.png"
+		"task": "Dance like nobody's watching"
 	}
 ]
