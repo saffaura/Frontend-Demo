@@ -1,0 +1,11 @@
+<div ng-controller="TasksController" id="taskTable">
+  <div ng-repeat="task in tasks" class="taskContainer">
+    <div class="taskHeader">{{task.task}}</div>
+    <div class="taskImage">
+      <img ng-src="{{task.image}}" ng-class="isComplete(task) ? 'img-complete' : ''"/>
+      <button class="btn btn-success" ng-class="isComplete(task) ? 'btn-complete' : ''" ng-click="completeTask(task)">
+        <i class="fa fa-check-circle-o"></i>
+      </button>
+    </div>
+  </div>
+</div>

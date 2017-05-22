@@ -1,0 +1,43 @@
+[
+	{
+		"id": "0",
+		"task": "Buy groceries",
+		"image": "images/task0.png"
+	}, {
+		"id": "1",
+		"task": "Cook dinner",
+		"image": "images/task1.png"
+	}, {
+		"id": "2",
+		"task": "Water the plants",
+		"image": "images/task2.png"
+	}, {
+		"id": "3",
+		"task": "Practice piano",
+		"image": "images/task3.png"
+	}, {
+		"id": "4",
+		"task": "Walk the dog",
+		"image": "images/task4.png"
+	}, {
+		"id": "5",
+		"task": "Buy flowers for mom",
+		"image": "images/task5.png"
+	}, {
+		"id": "6",
+		"task": "Do the laundry",
+		"image": "images/task6.png"
+	}, {
+		"id": "7",
+		"task": "Exercise",
+		"image": "images/task7.png"
+	}, {
+		"id": "8",
+		"task": "Eat an apple",
+		"image": "images/task8.png"
+	}, {
+		"id": "9",
+		"task": "Dance like nobody's watching",
+		"image": "images/task9.png"
+	}
+]

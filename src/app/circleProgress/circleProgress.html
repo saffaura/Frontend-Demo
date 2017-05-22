@@ -1,0 +1,13 @@
+<div id="circle-panel">
+  <div id="circle" size="{{ size }}" complete="progress" color="{{ background }}"></div>
+  <div id="progressTextPanel">
+    <div id="starsContainer">
+      <div class="star-wrapper">
+        <i ng-class="(complete >= 1/3) ? 'fa fa-star' : (complete == 0 ? 'fa fa-star-o' : 'fa fa-star-half-o')"></i>
+        <i ng-class="(complete >= 2/3) ? 'fa fa-star' : (complete <= 1/3 ? 'fa fa-star-o' : 'fa fa-star-half-o')"></i>
+        <i ng-class="(complete > 5/6) ? 'fa fa-star' : (complete <= 2/3 ? 'fa fa-star-o' : 'fa fa-star-half-o')"></i>
+      </div>
+    </div>
+    <p id="starText">{{complete * 6 | number: 0}} tasks complete{{complete > 0 ? '!' : ''}}</p>
+  </div>
+</div>
