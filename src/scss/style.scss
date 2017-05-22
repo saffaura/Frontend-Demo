@@ -7,6 +7,7 @@ body {
   background-color: black;
   color: white;
   height: 100%;
+  font-size: 100%;
 }
 
 .btn-complete {
@@ -17,6 +18,66 @@ body {
   border-radius: 0px;
   border: none;
   background-color: rgba(255, 255, 255, 0.63);
+}
+
+.task-container {
+	width: 50%;
+	display: inline-block;
+}
+
+.task-header {
+	width: 100%;
+    background: white;
+    color: black;
+    padding: 10px;
+    text-align: center;
+}
+
+.task-wrapper {
+	text-align: right;
+	
+	.task-image {
+		width: 100%;
+		transition: all 0.5s ease;
+		-webkit-filter: sepia(50%); /* Safari */
+		filter: sepia(50%);
+		
+		&:hover {
+			-webkit-filter: sepia(0%); /* Safari */
+			filter: sepia(0%);
+		}
+	}
+	
+	.task-image-complete {
+		-webkit-filter: grayscale(100%); /* Safari */
+		filter: grayscale(100%);
+		
+		&:hover {
+			-webkit-filter: grayscale(0%); /* Safari */
+			filter: grayscale(0%);
+		}
+	}
+	
+	.task-btn {
+		margin-top: -57px;
+		border-radius: 50%;
+		filter: none;
+		-webkit-filter: grayscale(0);
+		font-size: 2em;
+		padding: 3px 8px;
+		background: radial-gradient(ellipse at center, #87b98a 29%,#204029 100%);
+		border: solid 1px rgba(45, 80, 54, 0.47);
+	}
+	
+	.task-btn-complete {
+		background: transparent;
+		border: none;
+		font-size: 4em;
+		margin-right: -7px;
+		margin-top: -51px;
+		color: rgba(182, 255, 153, 0.71);
+		cursor: default;
+	}
 }
 
 tasks, #circle-progress {
@@ -40,5 +101,6 @@ tasks, #circle-progress {
 }
 
 #main-panel {
-  display: table-row;
+  display: flex;
 }
+

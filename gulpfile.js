@@ -20,6 +20,7 @@ var devMode = false;
 
 gulp.task('sass', function() {
     gulp.src(styles)
+		.pipe(sass())
 		.pipe(minifyCSS({
             keepBreaks: true
         }))

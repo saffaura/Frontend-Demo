@@ -1,10 +1,10 @@
-<div ng-controller="TasksController" id="taskTable">
-  <div ng-repeat="task in user.tasks" class="taskContainer">
-    <div class="taskHeader">{{task.task}}</div>
-    <div class="taskImage">
-      <img ng-src="images/task{{task.id}}.png" ng-class="isComplete(task) ? 'img-complete' : ''"/>
-      <button class="btn btn-success" ng-class="isComplete(task) ? 'btn-complete' : ''" ng-click="completeTask(task)">
-        <i class="fa fa-check-circle-o"></i>
+<div ng-controller="TasksController" id="task-table">
+  <div ng-repeat="task in user.tasks" class="task-container container">
+    <div class="task-header">{{task.task}}</div>
+    <div class="task-wrapper">
+      <img ng-src="images/task{{task.id}}.png" ng-class="isComplete(task) ? 'task-image-complete' : ''" class="task-image"/>
+      <button class="btn btn-success task-btn" ng-class="isComplete(task) ? 'task-btn-complete' : ''" ng-click="completeTask(task)">
+        <i ng-class="isComplete(task) ? 'fa fa-check-circle-o' : 'fa fa-check'"></i>
       </button>
     </div>
   </div>
