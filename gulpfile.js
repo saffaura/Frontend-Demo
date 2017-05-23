@@ -18,73 +18,70 @@ const historyApiFallback = require('connect-history-api-fallback');
 const reload = browserSync.reload;
 
 gulp.task('sass', function() {
-    gulp.src(styles)
-		.pipe(sass())
-		.pipe(minifyCSS({
-            keepBreaks: true
-        }))
-        .pipe(concat('styles.css'))
-        .pipe(gulp.dest('./app/css'))
-        .pipe(reload({
-            stream: true
-        }));
+  gulp.src(styles)
+  .pipe(sass())
+  .pipe(minifyCSS({
+    keepBreaks: true
+  }))
+  .pipe(concat('styles.css'))
+  .pipe(gulp.dest('./app/css'))
+  .pipe(reload({
+    stream: true
+  }));
 });
 
 gulp.task('sasslint', function() {
-    gulp.src(styles)
-        .pipe(sasslint())
-		.pipe(sasslint.format());
+  gulp.src(styles)
+  .pipe(sasslint())
+  .pipe(sasslint.format());
 });
 
 gulp.task('js', function() {
-    gulp.src(['index.js'])
-      .pipe(gulp.dest('./app/lib'));
-    gulp.src(scripts)
-        .pipe(concat('all.min.js'))
-        .pipe(babel({
-          presets: ['es2015']
-        }))
-        .pipe(gulp.dest('./app/js'))
-        .pipe(browserSync.reload({
-            stream: true
-        }));
+  gulp.src(['index.js'])
+  .pipe(gulp.dest('./app/lib'));
+  gulp.src(scripts)
+  .pipe(concat('all.min.js'))
+  .pipe(babel({
+    presets: ['es2015']
+  }))
+  .pipe(gulp.dest('./app/js'))
+  .pipe(browserSync.reload({
+    stream: true
+  }));
 });
 
 gulp.task('jshint', function() {
-    gulp.src(scripts)
-        .pipe(jshint());
+  gulp.src(scripts)
+  .pipe(jshint());
 });
 
 gulp.task('html', function() {
-    gulp.src(html)
-		.pipe(minifyHTML({
-            conditionals: true
-        }))
-        .pipe(gulp.dest('./app/'))
-        .pipe(browserSync.reload({
-            stream: true
-        }));
+  gulp.src(html)
+  .pipe(gulp.dest('./app/'))
+  .pipe(browserSync.reload({
+    stream: true
+  }));
 });
 
 gulp.task('resources', function() {
-    return gulp.src(['./src/app/services/**/*.json', './src/**/*.png'])
-		  .pipe(gulp.dest('./app/'));
+  return gulp.src(['./src/app/services/**/*.json', './src/**/*.png'])
+  .pipe(gulp.dest('./app/'));
 });
 
 gulp.task('bower', function() {
-    return bower('bower_components')
-        .pipe(gulp.dest('./app/lib/'));
+  return bower('bower_components')
+  .pipe(gulp.dest('./app/lib/'));
 });
 
 
 gulp.task('build', function() {
-    gulp.start(['bower', 'sass', 'js', 'html', 'resources'])
+  gulp.start(['bower', 'sass', 'js', 'html', 'resources'])
 });
 
 gulp.task('browser-sync', ['nodemon'], function() {
-    browserSync.init(null, {
-      proxy: "http://localhost:3000"
-    });
+  browserSync.init(null, {
+    proxy: "http://localhost:3000"
+  });
 });
 
 gulp.task('nodemon', function(cb) {
@@ -100,10 +97,10 @@ gulp.task('nodemon', function(cb) {
 });
 
 gulp.task('serve', function() {
-    gulp.start(['build', 'browser-sync']);
-    gulp.watch(styles, ['sass']);
-    gulp.watch(html, ['html']);
-    gulp.watch(scripts, ['js']);
+  gulp.start(['build', 'browser-sync']);
+  gulp.watch(styles, ['sass']);
+  gulp.watch(html, ['html']);
+  gulp.watch(scripts, ['js']);
 });
 
 gulp.task('serveprod', function() {
