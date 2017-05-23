@@ -4,23 +4,12 @@ A single page app using AngularJS that presents a lists of tasks for the user to
 ## Prerequisites
 **[Node.js](https://nodejs.org/en/download/)**
 
-**Bower**
-```
-npm install -g bower
-```
-
-**Gulp**
-```
-npm install --global gulp-cli
-```
-
 ## Running the Application
 
 Run the following commands in the project directory
 ```
 npm install
-bower install
-gulp serve
+npm start
 ```
 
 ## Package Information
