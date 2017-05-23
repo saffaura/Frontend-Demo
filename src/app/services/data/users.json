@@ -5,21 +5,27 @@
 		"tasks": [
 			{
 				"id": "0",
+				"task": "Buy groceries",
 				"complete": "false"
 			}, {
 				"id": "1",
+				"task": "Cook dinner",
 				"complete": "false"
 			}, {
 				"id": "2",
+				"task": "Water the plants",
 				"complete": "false"
 			}, {
 				"id": "7",
+				"task": "Exercise",
 				"complete": "false"
 			}, {
 				"id": "8",
+				"task": "Eat an apple",
 				"complete": "false"
 			}, {
 				"id": "9",
+				"task": "Dance like nobody's watching",
 				"complete": "true"
 			}
 		]
