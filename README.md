@@ -1,5 +1,6 @@
 # Frontend-Demo
-A single page app using AngularJS that presents a lists of tasks for the user to complete.
+A single page app using AngularJS that presents a lists of tasks for the user to complete.  
+[Check out the demo](https://cryptic-oasis-23513.herokuapp.com/)
 
 ## Prerequisites
 **[Node.js](https://nodejs.org/en/download/)**, **[git](https://git-scm.com/downloads)**
