@@ -37,8 +37,6 @@ gulp.task('sasslint', function() {
 });
 
 gulp.task('js', function() {
-  gulp.src(['index.js'])
-  .pipe(gulp.dest('./app/lib'));
   gulp.src(scripts)
   .pipe(concat('all.min.js'))
   .pipe(babel({
