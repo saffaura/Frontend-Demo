@@ -27,7 +27,7 @@
     userService.getUser($rootScope.username, function(user) {
       $rootScope.user = user;
 	  taskFactory.resetCompleted();
-	  
+
       if($rootScope.user.tasks && $rootScope.user.tasks.length > 0) {
         $rootScope.user.tasks.forEach(function(task) {
           if(task.complete === "true") {
@@ -35,7 +35,7 @@
           }
         });
       } else {
-        newTasks();
+        $scope.newTasks();
       }
     });
 

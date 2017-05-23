@@ -1,10 +1,10 @@
 <div ng-controller="LoginController" id="login-panel">
   <div id="login-form">
-    <h3>Fancy Tasks</h3>
+    <h1>Fancy Tasks</h1>
     <input ng-model="username" list="{{users && 'user-list' || ''}}" type="text" class="form-control" value="demo-user">
     <datalist id="user-list">
         <option ng-repeat="user in users" value="{{user}}">
     </datalist>
-    <button ng-click="login()" type="submit">Login</button>
+    <button class="btn btn-default" ng-click="login()" type="submit">Login</button>
   </div>
 </div>

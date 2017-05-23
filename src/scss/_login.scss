@@ -1,0 +1,32 @@
+#login-panel {
+  display: inline-block;
+  text-align: center;
+
+  h1 {
+    color: $primary-light;
+  }
+
+  input {
+    margin-top: 20px;
+    padding: 25px;
+  }
+
+  button {
+    font-size: 2.5em;
+    margin-top: 15px;
+    background-color: $primary-medium;
+    border-color: $primary-lighter;
+    padding: 15px;
+    color: rgba($secondary-medium, 0.6);
+  }
+
+  #login-form {
+    width: 400px;
+    top: 50%;
+    left: 50%;
+    margin-top: -150px;
+    margin-left: -200px;
+    position: absolute;
+    display: grid;
+  }
+}
