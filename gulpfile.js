@@ -1,4 +1,5 @@
 const gulp = require('gulp');
+const connect = require('gulp-connect');
 const concat = require('gulp-concat');
 const sass = require('gulp-sass');
 const sasslint = require('gulp-sass-lint');
@@ -113,4 +114,4 @@ gulp.task('serveprod', function() {
   });
 });
 
-gulp.task('default', ['serve']);
+gulp.task('default', ['serveprod']);
