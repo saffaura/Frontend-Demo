@@ -1,5 +1,6 @@
 const gulp = require('gulp');
 const concat = require('gulp-concat');
+const connect = require('gulp-connect');
 const sass = require('gulp-sass');
 const sasslint = require('gulp-sass-lint');
 const minifyCSS = require('gulp-minify-css');
@@ -15,8 +16,6 @@ const nodemon = require("gulp-nodemon");
 const browserSync = require('browser-sync');
 const historyApiFallback = require('connect-history-api-fallback');
 const reload = browserSync.reload;
-
-var devMode = false;
 
 gulp.task('sass', function() {
     gulp.src(styles)
@@ -45,7 +44,7 @@ gulp.task('js', function() {
         .pipe(babel({
           presets: ['es2015']
         }))
-		    //.pipe(uglify())
+		    .pipe(uglify())
         .pipe(gulp.dest('./app/js'))
         .pipe(browserSync.reload({
             stream: true
@@ -108,4 +107,12 @@ gulp.task('serve', function() {
     gulp.watch(scripts, ['js']);
 });
 
-gulp.task('default', ['serve']);
+gulp.task('serveprod', function() {
+  connect.server({
+    root: 'app',
+    port: process.env.PORT || 5000, // localhost:5000
+    livereload: false
+  });
+});
+
+gulp.task('default', ['serveprod']);
