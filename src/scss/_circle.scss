@@ -1,0 +1,60 @@
+$largest: 1200px;
+$large: 1098px;
+$medium: 987px;
+$small: 768px;
+
+circle-progress {
+  margin-left: -20px;
+
+  #circle {
+    text-align: center;
+  }
+
+  #circle-panel {
+    transition: all 0.5s ease;
+    text-align: center;
+  }
+
+  #progressTextPanel {
+    font-size: 3em;
+    color: $primary-medium;
+
+    i {
+      font-size: 2em;
+    }
+
+    .fa-star-o {
+      color: $secondary-medium;
+    }
+  }
+
+
+  @media screen and (max-width: $largest) {
+    #circle canvas {
+      width: calc(400px - 20%) !important;
+      height: calc(400px - 20%) !important;
+    }
+  }
+
+  @media screen and (max-width: $large) {
+    #circle canvas {
+      width: calc(400px - 30%) !important;
+      height: calc(400px - 30%) !important;
+    }
+  }
+
+  @media screen and (max-width: $medium) {
+    #circle canvas {
+      width: calc(400px - 60%) !important;
+      height: calc(400px - 60%) !important;
+    }
+  }
+
+
+  @media screen and (max-width: $small) {
+    #circle canvas {
+      width: calc(400px - 20%) !important;
+      height: calc(400px - 20%) !important;
+    }
+  }
+}

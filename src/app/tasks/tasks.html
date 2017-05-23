@@ -3,8 +3,8 @@
     <div class="task-header">{{task.task}}</div>
     <div class="task-wrapper">
       <img ng-src="images/task{{task.id}}.png" ng-class="isComplete(task) ? 'task-image-complete' : ''" class="task-image"/>
-      <button class="btn btn-success task-btn" ng-class="isComplete(task) ? 'task-btn-complete' : ''" ng-click="completeTask(task)">
-        <i ng-class="isComplete(task) ? 'fa fa-check-circle-o' : 'fa fa-check'"></i>
+      <button class="btn btn-success task-btn" ng-class="isComplete(task) ? 'task-btn-complete' : 'task-btn-incomplete'" ng-click="completeTask(task)">
+        <i class="fa fa-check"></i>
       </button>
     </div>
   </div>

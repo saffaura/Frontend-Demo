@@ -1,3 +1,8 @@
+@import 'colors';
+@import 'toolbar';
+@import 'tasks';
+@import 'circle';
+
 body {
   -webkit-font-smoothing: antialiased;
   -moz-font-smoothing: antialiased;
@@ -8,85 +13,24 @@ body {
   color: white;
   height: 100%;
   font-size: 100%;
+  font-family: "Open Sans", sans-serif;
+  /* Generated with http://gradient.quasi.ink */
+background-size: cover;
+background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAJCAYAAADtj3ZXAAABOUlEQVQoUyXRwXITMRCE4b9n
+JO3aJAV5IsCJ/QJUEVLFIe9/4MIBx7tSU7s+zFEzX7f083xxs7iNjsOkgrF2MkS1+JTQSsfutFKotXK9dboSvb1cnBbDg8FKyGQEg4LWG09TcJzEGCu3x
+TweD2D4ex3o9fTiIGF0JBMJMMhMqkz1whzmYW676GoomRSMXp/PDgJJ0Du1BraJXQFtY9vMCh7nxuIPrusH03xEv05nb++EKKH9socJs/O37Dk6UwRTBp
+8Pnc7Kn38r+n0622mWddk5KRFAZKNoDwT0fVqKOQdPh0p0o/fvF3cGLmCNOz0LoYby3vyhVcwN05kFX1I8zAW9nZ7dItkwTkjfI2jza+z5a1RgJbcOZKY
+YHKrQj29fPW2XQnTf/3mnp6llk8A6RClJon2ZytbB4D9/SZCHoTkOjQAAAABJRU5ErkJggg==");
 }
 
-.btn-complete {
-  background-color: blue;
-}
-
-.navbar {
-  border-radius: 0px;
-  border: none;
-  background-color: rgba(255, 255, 255, 0.63);
-}
-
-.task-container {
-	width: 50%;
-	display: inline-block;
-}
-
-.task-header {
-	width: 100%;
-    background: white;
-    color: black;
-    padding: 10px;
-    text-align: center;
-}
-
-.task-wrapper {
-	text-align: right;
-	
-	.task-image {
-		width: 100%;
-		transition: all 0.5s ease;
-		-webkit-filter: sepia(50%); /* Safari */
-		filter: sepia(50%);
-		
-		&:hover {
-			-webkit-filter: sepia(0%); /* Safari */
-			filter: sepia(0%);
-		}
-	}
-	
-	.task-image-complete {
-		-webkit-filter: grayscale(100%); /* Safari */
-		filter: grayscale(100%);
-		
-		&:hover {
-			-webkit-filter: grayscale(0%); /* Safari */
-			filter: grayscale(0%);
-		}
-	}
-	
-	.task-btn {
-		margin-top: -57px;
-		border-radius: 50%;
-		filter: none;
-		-webkit-filter: grayscale(0);
-		font-size: 2em;
-		padding: 3px 8px;
-		background: radial-gradient(ellipse at center, #87b98a 29%,#204029 100%);
-		border: solid 1px rgba(45, 80, 54, 0.47);
-	}
-	
-	.task-btn-complete {
-		background: transparent;
-		border: none;
-		font-size: 4em;
-		margin-right: -7px;
-		margin-top: -51px;
-		color: rgba(182, 255, 153, 0.71);
-		cursor: default;
-	}
-}
-
-tasks, #circle-progress {
+tasks {
   display: table-cell;
   vertical-align: middle;
   width: 50%;
 }
 
 #login-panel {
+  display: inline-block;
   text-align: center;
 }
 
@@ -101,6 +45,6 @@ tasks, #circle-progress {
 }
 
 #main-panel {
-  display: flex;
+  margin: 0px;
+  text-align: center;
 }
-

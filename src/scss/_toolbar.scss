@@ -1,0 +1,39 @@
+toolbar {
+  .navbar {
+    border-radius: 0px;
+    border: none;
+    background: $primary-medium;
+    border-bottom: solid 1px $secondary-lighter;
+
+    li.dropdown {
+
+      .dropdown-menu {
+        background-color:  rgba($primary-medium, 0.6) !important;
+        li > a {
+          color: rgba($primary-light, 0.9) !important;
+        }
+      }
+
+      a {
+        color: rgba($secondary-medium, 0.6) !important;
+
+        &:focus {
+          color: rgba($primary-light, 0.6) !important;
+          background: rgba($secondary-medium, 0.3) !important;
+        }
+
+        &:hover {
+          background-color:  rgba($secondary-medium, 0.3) !important;
+        }
+      }
+    }
+
+    .navbar-brand {
+      color: rgba($secondary-medium, 0.6) !important;
+    }
+
+    .navbar-right {
+      font-size: 1.5em;
+    }
+  }
+}
