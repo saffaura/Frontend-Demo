@@ -1,6 +1,5 @@
 const gulp = require('gulp');
 const concat = require('gulp-concat');
-const connect = require('gulp-connect');
 const sass = require('gulp-sass');
 const sasslint = require('gulp-sass-lint');
 const minifyCSS = require('gulp-minify-css');
@@ -44,7 +43,6 @@ gulp.task('js', function() {
         .pipe(babel({
           presets: ['es2015']
         }))
-		    .pipe(uglify())
         .pipe(gulp.dest('./app/js'))
         .pipe(browserSync.reload({
             stream: true
@@ -115,4 +113,4 @@ gulp.task('serveprod', function() {
   });
 });
 
-gulp.task('default', ['serveprod']);
+gulp.task('default', ['serve']);
