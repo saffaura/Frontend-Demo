@@ -2,7 +2,7 @@
 A single page app using AngularJS that presents a lists of tasks for the user to complete.
 
 ## Prerequisites
-**[Node.js](https://nodejs.org/en/download/)**
+**[Node.js](https://nodejs.org/en/download/)**, **[git](https://git-scm.com/downloads)**
 
 ## Running the Application
 
@@ -23,7 +23,13 @@ views/
 ```
 
 But because this project will be extended in the future, I chose to organize my project by feature. 
-That way, as my project grows, I can quickly locate the target file. 
+That way, as my project grows, I can quickly locate the target file. For example:
+```
+app/
+----- dashboard/
+----- messageboard/
+----- sidebar/
+```
 
 ### Gulpfile.js
 
