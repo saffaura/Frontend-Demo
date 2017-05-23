@@ -39,6 +39,6 @@
   "scripts": {
      "postinstall": "bower install",
      "build": "gulp build",
-     "start": "node index.js"
+     "start": "gulp serve"
   }
 }
